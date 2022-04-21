@@ -9,16 +9,18 @@ class DetectionEventHandler {
             //TODO LISTEN FOR EVENTS IN DATABASE
             if(detectionOccured){
                 //TODO ACTUALLY GET DETECTION
-                var detection: Detection = Detection(0.0,0.0, 0,
-                "Test", "Test", ArrayList(), Detection.Status.INACTIVE)
-                detectionListeners.forEach {
-                    it.onDetection(detection)
-                }
+                /*var detection: Detection = Detection(0.0,0.0, 0,
+                "Test", "Test", ArrayList(), Detection.Status.INACTIVE)*/
+               /* detectionListeners.forEach {
+                    it.onDetection(detection)*/
+                //}
             }
         }
     }
 
     fun addDetectionListener(detectionEventListener: DetectionEventListener){
+/*
         detectionListeners.add(detectionEventListener)
+*/
     }
 }

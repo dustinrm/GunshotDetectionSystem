@@ -1,16 +1,15 @@
 package com.seniordesign.gunshotdetectionsystem
 
 class Officer(val id: Int, val name: String) {
-    val detections: MutableCollection<Detection>
-    val confirmations: HashMap<Detection, Boolean>
+    val confirmations: MutableCollection<DetectionConfirmation>
     init {
         //TODO add previous detections from database
-        detections = ArrayList()
-        confirmations = HashMap()
+        confirmations = ArrayList()
     }
 
     fun confirmDetection(detection: Detection, confirmation: Boolean){
-        confirmations.put(detection, confirmation)
+        val detectionConfirmation = DetectionConfirmation(confirmation, detection, "TIME")
+        confirmations.add(detectionConfirmation)
         detection.status = Detection.Status.INACTIVE
     }
 

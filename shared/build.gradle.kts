@@ -62,7 +62,15 @@ android {
     compileSdk = 31
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     defaultConfig {
-        minSdk = 21
+        minSdk = 24
         targetSdk = 31
     }
+}
+dependencies {
+    implementation(files("libs\\mssql-jdbc-10.2.0.jre8.jar"))
+    implementation("androidx.activity:activity-compose:1.4.0")
+    implementation("androidx.compose.material:material:1.1.1")
+    implementation("androidx.compose.animation:animation:1.1.1")
+    implementation("androidx.compose.ui:ui-tooling:1.1.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1")
 }

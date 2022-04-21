@@ -5,7 +5,13 @@ class Record(
     val officer: Officer,
     val timeOfConfirmation: String,
 ) {
-    fun export(){
+    fun export(exportType: ExportType, beginDate: String, endDate: String){
         //TODO
+    }
+
+    enum class ExportType{
+        CSV,
+        PNG,
+        EMAIL
     }
 }
